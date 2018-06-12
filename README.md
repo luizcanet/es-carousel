@@ -1,2 +1,2 @@
 # es-carousel
-Native and Flexible Carousel Módule
+Native and Flexible Carousel Module

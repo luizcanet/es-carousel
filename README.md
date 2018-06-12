@@ -1,2 +1,2 @@
-# es-carousel
-Native and Flexible Carousel Module
+# ECMAScript Carousel
+Native and Flexible Carousel Módule

@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/luizcanet/es-carousel/issues"
   },
-  "homepage": "https://github.com/luizcanet/es-carousel#readme"
+  "homepage": "https://github.com/luizcanet/es-carousel#readme",
+  "standard": {
+    "globals": [
+      "CustomEvent"
+    ]
+  }
 }

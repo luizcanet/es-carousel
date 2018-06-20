@@ -1,0 +1,34 @@
+{
+  "name": "es-carousel-page",
+  "version": "1.0.0",
+  "description": "ECMAScript Carousel Page",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm install && grunt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luizcanet/es-carousel.git"
+  },
+  "keywords": [
+    "page"
+  ],
+  "author": "Luiz Henrique Canet Filho <me@luizca.net>",
+  "license": "CC-BY-4.0",
+  "bugs": {
+    "url": "https://github.com/luizcanet/es-carousel/issues"
+  },
+  "homepage": "https://github.com/luizcanet/es-carousel#readme",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "semantic-ui-less": "^2.3.2"
+  },
+  "dependencies": {
+    "es-carousel": "^1.0.0"
+  }
+}

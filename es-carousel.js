@@ -63,7 +63,7 @@ export default class Carousel {
 
       this.wrapper.style.transform = 'translateX(-' + length + 'px)'
       this.page = this.page + 1
-      this.container.dispatchEvent(this.pageChanged)
+      this.dispatchEvent(this.pageChange)
     }
   }
 
@@ -118,8 +118,6 @@ export default class Carousel {
   enableControls () {
     this.previousControl = this.carousel.querySelector('.carousel-controls__previous')
     this.nextControl = this.carousel.querySelector('.carousel-controls__next')
-
-    this.currentTitle.innerHTML = this.getCurrentTitle()
 
     this.nextControl.addEventListener('click', () => {
       this.goToNextPage()

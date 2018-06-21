@@ -1,15 +1,19 @@
-.carousel__container {
+.basic-carousel {
+  max-width: 700px;
+}
+
+.basic-carousel__container {
   overflow: hidden;
   overflow-x: scroll;
 }
 
-.carousel__wrapper {
+.basic-carousel__wrapper {
   display: flex;
   flex-wrap: nowrap;
   transition: transform ease .3s;
 }
 
-.carousel__item {
+.basic-carousel__item {
   flex-shrink: 0;
   width: 100%;
 }

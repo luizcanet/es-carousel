@@ -1,9 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>ECMAScript Carousel - Native and Flexible Carousel Module</title>
     <link href="styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="styles/basic-example.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/basic-example.js" type="module"></script>
   </head>
   <body>
     <header class="ui inverted vertical masthead center aligned segment">
@@ -14,23 +16,78 @@
     </header>
     <main class="ui main container">
       <div class="ui basic segment">
-        <h2>Usage</h2>
-        <p>
-          This package is intended to be used as an ES6 module. So you can use
-          one of the loading forms shown below:
-        </p>
-        <h3>HTML</h3>
-        <pre>
-          <code>
-            &lt;script href="node_modules/es-carousel/es-carousel.js" type="module" /&gt;
-          </code>
-        </pre>
-        <h3>JavaScript Module</h3>
-        <pre>
-          <code>
-            import from 'node_modules/es-carousel/es-carousel.js'
-          </code>
-        </pre>
+        <div class="ui text container">
+          <h2>Usage</h2>
+          <p>
+            This package is intended to be used as an ES6 module. So you can use
+            one of the loading forms shown below:
+          </p>
+
+          <h3>As HTML script tag</h3>
+          <pre>
+<code>
+  &lt;script href="node_modules/es-carousel/es-carousel.js" type="module" /&gt;
+</code>
+          </pre>
+
+          <h3>As JavaScript Module</h3>
+          <pre>
+<code>
+  import from 'node_modules/es-carousel/es-carousel.js'
+</code>
+          </pre>
+
+          <h2>Markup and classes required</h2>
+          <p>
+            The carousel element must contain a child element with class name
+            <code>carousel__container</code>. Inside this element must exist an
+            element with <code>carousel__wrapper</code> as class name. And the
+            itens must be child items of the carousel wrapper using class
+            <code>carousel__item</code>.
+          </p>
+
+          <p>
+            Optionally the carousel can contain elements with
+            <code>carousel-controls__previous</code> and
+            <code>carousel-controls__next</code> classes to use in conjunction
+            with the <a
+              href="https://github.com/luizcanet/es-carousel/wiki/API#enablecontrols"
+              target="_blank">
+            enableControls()</a> method.
+          </p>
+
+          <h2>Basic Example</h2>
+          <div class="basic-carousel">
+            <div class="carousel-controls">
+              <button class="carousel-controls__previous">Back</button>
+              <button class="carousel-controls__next">Forward</button>
+            </div>
+            <div class="carousel__container">
+              <div class="carousel__wrapper">
+                <div class="carousel__item">
+                  <img src="http://via.placeholder.com/700x300/d9e778/ffffff?text=Page"
+                    alt="Carousel Page" />
+                </div>
+                <div class="carousel__item">
+                  <img src="http://via.placeholder.com/700x300/ff695e/ffffff?text=Page"
+                    alt="Carousel Page" />
+                </div>
+                <div class="carousel__item">
+                  <img src="http://via.placeholder.com/700x300/a291fb/ffffff?text=Page"
+                    alt="Carousel Page" />
+                </div>
+                <div class="carousel__item">
+                  <img src="http://via.placeholder.com/700x300/ff851b/ffffff?text=Page"
+                    alt="Carousel Page" />
+                </div>
+                <div class="carousel__item">
+                  <img src="http://via.placeholder.com/700x300/54c8ff/ffffff?text=Page"
+                    alt="Carousel Page" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <footer>

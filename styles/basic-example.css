@@ -1,0 +1,15 @@
+.carousel__container {
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.carousel__wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform ease .3s;
+}
+
+.carousel__item {
+  flex-shrink: 0;
+  width: 100%;
+}

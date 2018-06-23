@@ -61,6 +61,6 @@ More examples can be found at the project page:
 
 Links
 -----
-	- [Project Page](https://luizcanet.github.io/es-carousel/)
-	- [Wiki Documentation](https://github.com/luizcanet/es-carousel/wiki)
-	- [API](https://github.com/luizcanet/es-carousel/wiki/API)
+[Project Page](https://luizcanet.github.io/es-carousel/) |
+[Wiki Documentation](https://github.com/luizcanet/es-carousel/wiki) | 
+[API](https://github.com/luizcanet/es-carousel/wiki/API)

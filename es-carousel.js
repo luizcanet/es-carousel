@@ -1,4 +1,15 @@
+/**
+ * ECMAScript carousel
+ * Class that represents a carousel object
+ * @author Luiz Henrique Canet Filho <me@luizca.net>
+ * @module Carousel
+ */
 export default class Carousel {
+  /**
+   * constructor - Create a carousel
+   *
+   * @param {Element} carousel HTML Element that contains carousel elements
+   */
   constructor (carousel) {
     this.carousel = carousel
     this.container = this.carousel.querySelector('.carousel__container')
@@ -7,7 +18,7 @@ export default class Carousel {
     this.container.style.overflow = 'hidden'
     this.page = 1
     this.totalPages = this.items.length
-    this.pageChanged = new CustomEvent('pageChanged')
+    this.pageChange = new CustomEvent('pageChange')
 
     this.setContainerWidth()
 
@@ -16,44 +27,70 @@ export default class Carousel {
     }, false)
   }
 
+  /**
+   * setContainerWidth - Get the actual container element width to set the
+   * containerWidth attribute
+   */
   setContainerWidth () {
     this.containerWidth = window.getComputedStyle(this.container, null).width
     this.containerWidth = Number(this.containerWidth.match(/\d+/)[0])
   }
 
+  /**
+   * isFirstPage - Check if the actual page is the first page
+   *
+   * @return {Boolean}
+   */
   isFirstPage () {
     return (this.page === 1)
   }
 
+  /**
+   * isLastPage - Check if the actual page is the first page
+   *
+   * @return {Boolean}
+   */
   isLastPage () {
     return (this.page === this.totalPages)
   }
 
+  /**
+   * goToNextPage - Show de the next page
+   */
   goToNextPage () {
     if (!this.isLastPage()) {
       let length = this.containerWidth * this.page
 
       this.wrapper.style.transform = 'translateX(-' + length + 'px)'
       this.page = this.page + 1
-      this.container.dispatchEvent(this.pageChanged)
+      this.dispatchEvent(this.pageChange)
     }
   }
 
+  /**
+   * goToPreviousPage - Show de previous page
+   */
   goToPreviousPage () {
     if (!this.isFirstPage()) {
       let length = this.containerWidth * (this.page - 2)
 
       this.page = this.page - 1
-      this.container.dispatchEvent(this.pageChanged)
 
       if (!this.isFirstPage()) {
         this.wrapper.style.transform = 'translateX(-' + length + 'px)'
       } else {
         this.wrapper.style.transform = 'translateX(0px)'
       }
+
+      this.dispatchEvent(this.pageChange)
     }
   }
 
+  /**
+   * goToPage - Show an especific page
+   *
+   * @param {Number} page The page number
+   */
   goToPage (page) {
     if (page >= 0 && page <= this.totalPages) {
       let length = this.containerWidth * (page - 1)
@@ -65,14 +102,22 @@ export default class Carousel {
       } else {
         this.wrapper.style.transform = 'translateX(0px)'
       }
+
+      /**
+       * Page Change event.
+       *
+       * @event Carousel#pageChange
+       */
+      this.dispatchEvent(this.pageChange)
     }
   }
 
+  /**
+   * enableControls - Binds control elements click events to change page actions
+   */
   enableControls () {
     this.previousControl = this.carousel.querySelector('.carousel-controls__previous')
     this.nextControl = this.carousel.querySelector('.carousel-controls__next')
-
-    this.currentTitle.innerHTML = this.getCurrentTitle()
 
     this.nextControl.addEventListener('click', () => {
       this.goToNextPage()
@@ -99,6 +144,9 @@ export default class Carousel {
     })
   }
 
+  /**
+   * resize - Apply resize to the carousel
+   */
   resize () {
     this.setContainerWidth()
     this.goToPage(this.page)

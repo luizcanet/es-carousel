@@ -24,5 +24,9 @@
     "globals": [
       "CustomEvent"
     ]
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-documentation": "^1.2.3"
   }
 }

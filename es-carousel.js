@@ -63,7 +63,7 @@ export default class Carousel {
 
       this.wrapper.style.transform = 'translateX(-' + length + 'px)'
       this.page = this.page + 1
-      this.dispatchEvent(this.pageChange)
+      this.carousel.dispatchEvent(this.pageChange)
     }
   }
 
@@ -82,7 +82,7 @@ export default class Carousel {
         this.wrapper.style.transform = 'translateX(0px)'
       }
 
-      this.dispatchEvent(this.pageChange)
+      this.carousel.dispatchEvent(this.pageChange)
     }
   }
 
@@ -108,7 +108,7 @@ export default class Carousel {
        *
        * @event Carousel#pageChange
        */
-      this.dispatchEvent(this.pageChange)
+      this.carousel.dispatchEvent(this.pageChange)
     }
   }
 

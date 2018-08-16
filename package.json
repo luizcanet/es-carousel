@@ -26,9 +26,9 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-less": "^1.4.1",
     "grunt-contrib-watch": "^1.1.0",
-    "semantic-ui-less": "^2.3.2"
+    "semantic-ui-less": "^2.3.3"
   },
   "dependencies": {
-    "es-carousel": "^1.0.0"
+    "es-carousel": "^1.0.2"
   }
 }

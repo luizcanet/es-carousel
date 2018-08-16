@@ -42,17 +42,17 @@
           </p>
           <pre>
 <code>
-  npm i es-carousel
+npm i es-carousel
 </code>
           </pre>
 
           <p>
             Downloading package:
-            <a href="https://github.com/luizcanet/es-carousel/archive/1.0.1.zip">
-              es-carousel-1.0.1.zip
+            <a href="https://github.com/luizcanet/es-carousel/archive/1.0.2.zip">
+              es-carousel-1.0.2.zip
             </a> |
-            <a href="https://github.com/luizcanet/es-carousel/archive/1.0.1.tar.gz">
-              es-carousel-1.0.1.tar.gz
+            <a href="https://github.com/luizcanet/es-carousel/archive/1.0.2.tar.gz">
+              es-carousel-1.0.2.tar.gz
             </a>
           </p>
 
@@ -65,14 +65,14 @@
           <h3>As HTML script tag</h3>
           <pre>
 <code>
-  &lt;script href="node_modules/es-carousel/es-carousel.js" type="module" /&gt;
+&lt;script href="node_modules/es-carousel/es-carousel.js" type="module" /&gt;
 </code>
           </pre>
 
           <h3>As JavaScript Module</h3>
           <pre>
 <code>
-  import Carousel from '../node_modules/es-carousel/es-carousel.js'
+import Carousel from '../node_modules/es-carousel/es-carousel.js'
 </code>
           </pre>
 
@@ -96,25 +96,7 @@
           </p>
 
           <h3>Markup Example:</h3>
-          <pre>
-<code>
-  &lt;div class="carousel"&gt;
-    &lt;div class="carousel__container"&gt;
-      &lt;div class="carousel__wrapper"&gt;
-        &lt;div class="carousel__item"&gt;&lt;/div&gt;
-        &lt;div class="carousel__item"&gt;&lt;/div&gt;
-        &lt;div class="carousel__item"&gt;&lt;/div&gt;
-        &lt;div class="carousel__item"&gt;&lt;/div&gt;
-        &lt;div class="carousel__item"&gt;&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="carousel-controls"&gt;
-      &lt;button class="carousel-controls__previous"&gt;&lt;/button&gt;
-      &lt;button class="carousel-controls__next"&gt;&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</code>
-          </pre>
+          <script src="https://gist.github.com/luizcanet/432f35fd0437ed5b5b267150272bdb75.js"></script>
 
           <h2>Basic Example</h2>
           <div class="basic-carousel">
@@ -149,80 +131,13 @@
           </div>
 
           <h3>HTML</h3>
-          <pre>
-<code>
-  &lt;div class="basic-carousel"&gt;
-    &lt;div class="carousel-controls"&gt;
-      &lt;button class="carousel-controls__previous"&gt;Back&lt;/button&gt;
-      &lt;button class="carousel-controls__next"&gt;Forward&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;div class="basic-carousel__container carousel__container"&gt;
-      &lt;div class="basic-carousel__wrapper carousel__wrapper"&gt;
-        &lt;div class="basic-carousel__item carousel__item"&gt;
-          &lt;img src="http://via.placeholder.com/700x300/d9e778/ffffff?text=Page"
-            alt="Carousel Page" /&gt;
-        &lt;/div&gt;
-        &lt;div class="basic-carousel__item carousel__item"&gt;
-          &lt;img src="http://via.placeholder.com/700x300/ff695e/ffffff?text=Page"
-            alt="Carousel Page" /&gt;
-        &lt;/div&gt;
-        &lt;div class="basic-carousel__item carousel__item"&gt;
-          &lt;img src="http://via.placeholder.com/700x300/a291fb/ffffff?text=Page"
-            alt="Carousel Page" /&gt;
-        &lt;/div&gt;
-        &lt;div class="basic-carousel__item carousel__item"&gt;
-          &lt;img src="http://via.placeholder.com/700x300/ff851b/ffffff?text=Page"
-            alt="Carousel Page" /&gt;
-        &lt;/div&gt;
-        &lt;div class="basic-carousel__item carousel__item"&gt;
-          &lt;img src="http://via.placeholder.com/700x300/54c8ff/ffffff?text=Page"
-            alt="Carousel Page" /&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</code>
-          </pre>
+          <script src="https://gist.github.com/luizcanet/6a71510d967f34f86a51baecbdb4e2f6.js"></script>
 
           <h3>CSS</h3>
-          <pre>
-<code>
-  /* styles/basic-example.css */
-
-  .basic-carousel {
-    max-width: 700px;
-  }
-
-  .basic-carousel__container {
-    overflow: hidden;
-    overflow-x: scroll;
-  }
-
-  .basic-carousel__wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-    transition: transform ease .3s;
-  }
-
-  .basic-carousel__item {
-    flex-shrink: 0;
-    width: 100%;
-  }
-</code>
-          </pre>
+          <script src="https://gist.github.com/luizcanet/eb9b66fd83e29958a8faf823b73bb182.js"></script>
 
           <h3>JavaScript</h3>
-          <pre>
-<code>
-  // scripts/basic-example.js
-
-  import Carousel from '../node_modules/es-carousel/es-carousel.js'
-
-  let basicExample = new Carousel(document.querySelector('.basic-carousel'))
-  basicExample.enableControls()
-
-</code>
-          </pre>
+          <script src="https://gist.github.com/luizcanet/49b46fc70b05c2d2915e912859c265b6.js"></script>
         </div>
       </div>
     </main>
